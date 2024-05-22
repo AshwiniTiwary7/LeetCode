@@ -30,10 +30,10 @@ var maxArea = function (height) {
         var area = 0;
         while (p1 <= p2) {
             // console.log(area)
-            const smallBar = Math.min(height[p1],height[p2]);
+            const smallBar = Math.min(height[p1], height[p2]);
             const lengthBtw = p2 - p1;
             const newArea = smallBar * lengthBtw;
-            if(newArea > area){
+            if (newArea > area) {
                 area = newArea;
             }
             height[p1] <= height[p2] ? p1++ : p2--
@@ -42,4 +42,4 @@ var maxArea = function (height) {
     }
 }
 
-console.log(maxArea([2,3,4,5,18,17,6]));
+console.log(maxArea([2, 3, 4, 5, 18, 17, 6]));
